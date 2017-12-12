@@ -6,6 +6,7 @@ public class ProjetilScript : MonoBehaviour {
 
 	public float velocidade;
 	public float tempoDeVida;
+	public GameObject explosaoPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +18,12 @@ public class ProjetilScript : MonoBehaviour {
 	void Update () {
 		// Move o projetil.
 		transform.Translate(Vector2.up * velocidade * Time.deltaTime);
-
 	}
 
 	void OnCollisionEnter2D (Collision2D c) {
 		// Destroi o projetil por colisão.
 		if (c.gameObject.tag == "Inimigo") {
+			Instantiate (explosaoPrefab, transform.position, transform.rotation);
 			Destroy (gameObject);
 			Destroy (c.gameObject);
 		}

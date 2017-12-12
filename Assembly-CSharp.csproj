@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ArmaScript.cs" />
+     <Compile Include="Assets\Scripts\Destruir.cs" />
      <Compile Include="Assets\Scripts\GerarInimigosScript.cs" />
      <Compile Include="Assets\Scripts\JogadorScript.cs" />
      <Compile Include="Assets\Scripts\MoverFundoScript.cs" />
